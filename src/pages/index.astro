@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { profile } from '../data/profile';
+
+const c = profile.contact;
+const base = import.meta.env.BASE_URL;
+const resumeHref = c.resumePdf ? `${base}${c.resumePdf.replace(/^\//, '')}` : '';
+const year = new Date().getFullYear();
+const hasExperience = profile.experience.some((e) => e.company !== 'Company Name');
+---
+
+<Layout>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">{profile.name}</a>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="wrap">
+        {profile.available && (
+          <span class="hero__badge"><span class="dot"></span> Open to opportunities</span>
+        )}
+        <h1>{profile.name}</h1>
+        <p class="hero__title">{profile.title}</p>
+        <p class="hero__tagline">{profile.tagline}</p>
+        {profile.location && <p class="hero__meta">📍 {profile.location}</p>}
+
+        <div class="btns">
+          {c.email && (
+            <a class="btn btn--primary" href={`mailto:${c.email}`}>Get in touch</a>
+          )}
+          {resumeHref && (
+            <a class="btn btn--ghost" href={resumeHref} target="_blank" rel="noopener">
+              Download résumé
+            </a>
+          )}
+          {c.github && (
+            <a class="btn btn--ghost" href={c.github} target="_blank" rel="noopener">
+              GitHub
+            </a>
+          )}
+          {c.linkedin && (
+            <a class="btn btn--ghost" href={c.linkedin} target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-label">About</div>
+        {profile.about.map((p) => <p style="color:var(--text-soft);max-width:680px;">{p}</p>)}
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-label">Skills</div>
+        {profile.skillGroups.map((g) => (
+          <div class="skillgroup">
+            <div class="skillgroup__label">{g.label}</div>
+            <div class="chips">
+              {g.skills.map((s) => <span class="chip">{s}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-label">Experience</div>
+        {hasExperience ? (
+          <div class="cards">
+            {profile.experience.map((e) => (
+              <div class="card">
+                <h3>{e.role}</h3>
+                <div class="card__meta">{e.company} · {e.start} – {e.end}</div>
+                <p>{e.summary}</p>
+                {e.highlights?.length > 0 && (
+                  <ul>{e.highlights.map((h) => <li>{h}</li>)}</ul>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p style="color:var(--text-faint);font-family:var(--mono);font-size:0.9rem;">
+            // Work history coming soon — add roles in src/data/profile.ts
+          </p>
+        )}
+
+        {profile.certifications.length > 0 && (
+          <div style="margin-top:32px;">
+            <div class="skillgroup__label">Certifications</div>
+            <div class="chips">
+              {profile.certifications.map((cert) => (
+                <span class="chip">{cert.name}{cert.year ? ` · ${cert.year}` : ''}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-label">Projects</div>
+        <div class="cards cols-2">
+          {profile.projects.map((p) => (
+            <div class="card">
+              <h3>
+                {p.link ? <a href={p.link} target="_blank" rel="noopener">{p.name} ↗</a> : p.name}
+              </h3>
+              <p>{p.blurb}</p>
+              {p.stack?.length > 0 && (
+                <div class="tags">{p.stack.map((t) => <span class="tag">{t}</span>)}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© {year} {profile.name}. Built with Astro.</p>
+      {c.email && <p><a href={`mailto:${c.email}`}>{c.email}</a></p>}
+    </div>
+  </footer>
+</Layout>
