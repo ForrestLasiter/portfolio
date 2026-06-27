@@ -18,6 +18,7 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
       </div>
     </div>
@@ -114,6 +115,25 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
             </div>
           </div>
         )}
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="wrap">
+        <div class="section-label">Education</div>
+        <div class="cards">
+          {profile.education.map((ed) => (
+            <div class="card">
+              <h3>{ed.school}</h3>
+              <ul>
+                {ed.credentials.map((cr) => (
+                  <li>{cr.name}{cr.year ? ` · ${cr.year}` : ''}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 

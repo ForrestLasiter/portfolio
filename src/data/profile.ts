@@ -3,17 +3,17 @@
 //  -----------------------------------------------------------------------------
 //  This is the ONLY file you need to edit to update your portfolio's content.
 //  Change the text between the quotes. Add or remove items from the lists.
-//  Anything marked  // TODO  is a placeholder I (Claude) couldn't fill in yet —
-//  give me the real details and I'll drop them in, or edit them here yourself.
+//  Built from your résumé + Joint Services Transcript — tweak anything that
+//  doesn't sound like you.
 // =============================================================================
 
 export const profile = {
   // --- Header / hero ---------------------------------------------------------
   name: 'Forrest Lasiter',
-  title: 'IT Professional & Homelab Engineer', // TODO: your preferred headline
+  title: 'IT Systems Analyst · Electronics Engineering Technologist',
   tagline:
-    'I build, break, and run things — from self-hosted infrastructure in my homelab to software that solves real problems.',
-  location: 'United States', // TODO: city/region if you want it shown
+    'U.S. Army veteran turned IT systems analyst — I work where hardware, networks, and software meet, from enterprise endpoints to industrial controls to my own homelab.',
+  location: 'Fort Smith, Arkansas',
   available: true, // shows an "open to opportunities" badge; set false to hide
 
   // --- Contact / links -------------------------------------------------------
@@ -22,34 +22,37 @@ export const profile = {
     email: 'forrest.lasiter@gmail.com',
     github: 'https://github.com/ForrestLasiter',
     linkedin: '', // TODO: your LinkedIn URL
-    resumePdf: '', // TODO: drop a resume.pdf in /public and put '/resume.pdf' here
+    resumePdf: '', // a sanitized résumé PDF can go here (no home address/phone)
   },
 
   // --- About -----------------------------------------------------------------
   about: [
-    // Each string is a paragraph. Rewrite these in your own voice.
-    'I’m an IT professional with a hands-on, build-it-yourself approach to technology. Most of what I know I learned by running it myself — standing up servers, wiring networks, automating the boring parts, and fixing what breaks at 2am.',
-    'My homelab is my proving ground: it’s where I test ideas before they matter in production and where I keep my skills sharp across systems administration, networking, virtualization, and self-hosting.',
+    'I’m an IT systems analyst and U.S. Army veteran with a hands-on background that runs from enterprise endpoint management to industrial controls and electronics. I got my start as an Army Signal/IT specialist — running networks and help desks stateside and overseas — and I’ve been building on that foundation ever since.',
+    'Today I support a university’s fleet of Windows, macOS, and iOS/iPadOS devices, and I keep my skills sharp in a homelab where I run and break my own infrastructure. I hold a B.S. in Electrical Engineering Technology, and I’m drawn to problems that sit right where hardware, networks, and software meet.',
   ],
 
   // --- Skills ---------------------------------------------------------------
   // Group your skills however makes sense. Add/remove groups and items freely.
   skillGroups: [
     {
-      label: 'Systems & OS',
-      skills: ['Windows', 'Linux', 'Windows Server'], // TODO: refine
-    },
-    {
-      label: 'Virtualization & Containers',
-      skills: ['Proxmox', 'Docker', 'VMware'], // TODO: refine
+      label: 'IT & Endpoint Management',
+      skills: ['Windows', 'macOS', 'iOS / iPadOS', 'Active Directory', 'MECM / SCCM', 'Microsoft Intune', 'JAMF'],
     },
     {
       label: 'Networking',
-      skills: ['TCP/IP', 'VLANs', 'Firewalls', 'DNS', 'VPN'], // TODO: refine
+      skills: ['TCP/IP', 'Cisco Routing & Switching', 'Network Cabling', 'Server Administration', 'Help Desk'],
     },
     {
-      label: 'Tools & Automation',
-      skills: ['Git', 'PowerShell', 'Bash'], // TODO: refine
+      label: 'Industrial & Electrical',
+      skills: ['PLCs', 'HMIs', 'SCADA', 'Industrial Control Systems', 'AC/DC Motors', 'Electrical Troubleshooting'],
+    },
+    {
+      label: 'Engineering & Design',
+      skills: ['SolidWorks', 'AutoCAD', 'Robotics', 'Solar / Wind Power Systems'],
+    },
+    {
+      label: 'Homelab & Virtualization',
+      skills: ['Proxmox', 'Docker', 'Linux', 'Self-hosting', 'PowerShell'],
     },
   ],
 
@@ -57,22 +60,63 @@ export const profile = {
   // Most recent first. Add an entry per role.
   experience: [
     {
-      role: 'Your Job Title', // TODO
-      company: 'Company Name', // TODO
-      start: 'YYYY', // TODO
-      end: 'Present', // TODO  ('Present' or a year)
+      role: 'PC Systems Analyst',
+      company: 'University of Arkansas – Fort Smith',
+      start: '2022',
+      end: 'Present',
       summary:
-        'One or two lines on what you did and the impact you had.', // TODO
+        'Endpoint and systems support across a university campus, keeping faculty, staff, and student devices running.',
       highlights: [
-        'A specific accomplishment with a number if you have one.', // TODO
-        'Another responsibility or win.', // TODO
+        'Troubleshoot Windows, macOS, iOS, and iPadOS hardware and software issues for end users.',
+        'Image, deploy, and remotely manage devices using Active Directory, MECM, Microsoft Intune, and JAMF.',
+        'Provide remote and on-site assistance across the campus fleet.',
+      ],
+    },
+    {
+      role: 'Electrical Technician',
+      company: 'Glatfelter',
+      start: '2021',
+      end: '2022',
+      summary:
+        'Maintained industrial automation and electrical systems on the plant floor.',
+      highlights: [
+        'Programmed and maintained PLCs, HMIs, and SCADA systems for production machinery.',
+        'Installed and repaired electrical wiring for machines and devices.',
+      ],
+    },
+    {
+      role: 'IT / Signal Support Specialist (25B, 25U)',
+      company: 'U.S. Army',
+      start: '2012',
+      end: '2019',
+      summary:
+        'Deployed IT and signal-support specialist running networks and help-desk operations stateside and overseas.',
+      highlights: [
+        'Managed an IT help desk in Kuwait and base surveillance + flight scheduling operations in Iraq.',
+        'Built and maintained network infrastructure — server stacks, cabling, and connectivity.',
+        'Performed preventive maintenance on electronic and communications equipment.',
+        'Trained at the U.S. Army Signal School (Ft. Gordon); earned CompTIA Security+. Awarded the Army Commendation Medal.',
+      ],
+    },
+  ],
+
+  // --- Education -------------------------------------------------------------
+  // Most recent first.
+  education: [
+    {
+      school: 'University of Arkansas – Fort Smith',
+      credentials: [
+        { name: 'B.S., Electrical Engineering Technology', year: '2021' },
+        { name: 'A.A.S., Electronics Technology', year: '2019' },
+        { name: 'Technical Certificate, Industrial Electronics & Electrical Maintenance', year: '2019' },
+        { name: 'Certificate of Proficiency, Robotics', year: '2019' },
       ],
     },
   ],
 
   // --- Certifications --------------------------------------------------------
   certifications: [
-    // { name: 'CompTIA A+', issuer: 'CompTIA', year: '2024' },  // TODO
+    { name: 'CompTIA Security+', issuer: 'CompTIA', year: '' },
   ],
 
   // --- Projects --------------------------------------------------------------
@@ -88,8 +132,8 @@ export const profile = {
     {
       name: 'Homelab',
       blurb:
-        'My self-hosted lab environment — the place I run, test, and document the infrastructure that backs everything else.', // TODO: expand with what you actually run
-      stack: ['Proxmox', 'Docker', 'Networking'], // TODO: refine
+        'My self-hosted lab environment — the place I run, test, and document the infrastructure that backs everything else.', // TODO: tell me what you actually run and I'll expand this
+      stack: ['Proxmox', 'Docker', 'Networking'],
       link: '',
     },
   ],
