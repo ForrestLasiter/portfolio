@@ -21,7 +21,7 @@ export const profile = {
     email: 'forrest.lasiter@gmail.com',
     github: 'https://github.com/ForrestLasiter',
     linkedin: 'https://linkedin.com/in/forrestlasiter',
-    resumePdf: '', // a sanitized résumé PDF can go here (no home address/phone)
+    resumePdf: '/resume.pdf', // sanitized résumé (no home address/phone) — file in /public
   },
 
   // --- About -----------------------------------------------------------------
