@@ -91,7 +91,7 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
             {profile.experience.map((e) => (
               <div class="card">
                 <h3>{e.role}</h3>
-                <div class="card__meta">{e.company} · {e.start} – {e.end}</div>
+                <div class="card__meta">{e.company}{e.location ? ` · ${e.location}` : ''} · {e.start} – {e.end}</div>
                 <p>{e.summary}</p>
                 {e.highlights?.length > 0 && (
                   <ul>{e.highlights.map((h) => <li>{h}</li>)}</ul>
@@ -112,6 +112,15 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
               {profile.certifications.map((cert) => (
                 <span class="chip">{cert.name}{cert.year ? ` · ${cert.year}` : ''}</span>
               ))}
+            </div>
+          </div>
+        )}
+
+        {profile.awards.length > 0 && (
+          <div style="margin-top:32px;">
+            <div class="skillgroup__label">Awards &amp; Honors</div>
+            <div class="chips">
+              {profile.awards.map((a) => <span class="chip">{a}</span>)}
             </div>
           </div>
         )}

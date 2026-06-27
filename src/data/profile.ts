@@ -3,16 +3,15 @@
 //  -----------------------------------------------------------------------------
 //  This is the ONLY file you need to edit to update your portfolio's content.
 //  Change the text between the quotes. Add or remove items from the lists.
-//  Built from your résumé + Joint Services Transcript — tweak anything that
-//  doesn't sound like you.
+//  Source of truth: Lasiter_Forrest_Resume.docx (Google Drive, the polished one).
 // =============================================================================
 
 export const profile = {
   // --- Header / hero ---------------------------------------------------------
   name: 'Forrest Lasiter',
-  title: 'IT Systems Analyst · Electronics Engineering Technologist',
+  title: 'IT Professional · Industrial Controls · U.S. Army Veteran',
   tagline:
-    'U.S. Army veteran turned IT systems analyst — I work where hardware, networks, and software meet, from enterprise endpoints to industrial controls to my own homelab.',
+    'IT professional and U.S. Army veteran with 10+ years in IT, network administration, and systems support — skilled in endpoint management, enterprise tooling, and Windows, macOS, and Linux environments.',
   location: 'Fort Smith, Arkansas',
   available: true, // shows an "open to opportunities" badge; set false to hide
 
@@ -21,38 +20,38 @@ export const profile = {
   contact: {
     email: 'forrest.lasiter@gmail.com',
     github: 'https://github.com/ForrestLasiter',
-    linkedin: '', // TODO: your LinkedIn URL
+    linkedin: 'https://linkedin.com/in/forrestlasiter',
     resumePdf: '', // a sanitized résumé PDF can go here (no home address/phone)
   },
 
   // --- About -----------------------------------------------------------------
   about: [
-    'I’m an IT systems analyst and U.S. Army veteran with a hands-on background that runs from enterprise endpoint management to industrial controls and electronics. I got my start as an Army Signal/IT specialist — running networks and help desks stateside and overseas — and I’ve been building on that foundation ever since.',
-    'Today I support a university’s fleet of Windows, macOS, and iOS/iPadOS devices, and I keep my skills sharp in a homelab where I run and break my own infrastructure. I hold a B.S. in Electrical Engineering Technology, and I’m drawn to problems that sit right where hardware, networks, and software meet.',
+    'I’m an IT professional and U.S. Army veteran with 10+ years across information technology, network administration, and systems support. I’m skilled in endpoint management and enterprise tooling — Active Directory, MECM, Microsoft 365, and Jamf — and in supporting Windows, macOS, and Linux environments.',
+    'My background runs from enterprise IT support to industrial controls and electronics: I’ve managed campus device fleets, run military help desks overseas, and now engineer PLC- and robotics-driven automation systems. I’m looking for an IT role where technical depth and a service-first mindset drive results.',
   ],
 
   // --- Skills ---------------------------------------------------------------
   // Group your skills however makes sense. Add/remove groups and items freely.
   skillGroups: [
     {
-      label: 'IT & Endpoint Management',
-      skills: ['Windows', 'macOS', 'iOS / iPadOS', 'Active Directory', 'MECM / SCCM', 'Microsoft Intune', 'JAMF'],
+      label: 'Operating Systems & Endpoints',
+      skills: ['Windows 10/11', 'macOS', 'Linux', 'Active Directory', 'MECM', 'Microsoft 365', 'Jamf'],
     },
     {
-      label: 'Networking',
-      skills: ['TCP/IP', 'Cisco Routing & Switching', 'Network Cabling', 'Server Administration', 'Help Desk'],
+      label: 'Networking & Infrastructure',
+      skills: ['TCP/IP', 'Cabling', 'Server Configuration', 'Monitoring', 'VMware', 'Hyper-V'],
+    },
+    {
+      label: 'Security & Support',
+      skills: ['IT Security Fundamentals', 'Patch Management', 'Level II Helpdesk', 'Hardware/Software Troubleshooting'],
     },
     {
       label: 'Industrial & Electrical',
-      skills: ['PLCs', 'HMIs', 'SCADA', 'Industrial Control Systems', 'AC/DC Motors', 'Electrical Troubleshooting'],
+      skills: ['PLCs', 'HMIs', 'Industrial Robotics', 'Control Systems', 'Campus A/V Systems'],
     },
     {
-      label: 'Engineering & Design',
-      skills: ['SolidWorks', 'AutoCAD', 'Robotics', 'Solar / Wind Power Systems'],
-    },
-    {
-      label: 'Homelab & Virtualization',
-      skills: ['Proxmox', 'Docker', 'Linux', 'Self-hosting', 'PowerShell'],
+      label: 'Homelab & Tools',
+      skills: ['Proxmox', 'Docker', 'Self-hosting', 'PowerShell'],
     },
   ],
 
@@ -60,42 +59,47 @@ export const profile = {
   // Most recent first. Add an entry per role.
   experience: [
     {
-      role: 'PC Systems Analyst',
-      company: 'University of Arkansas – Fort Smith',
-      start: '2022',
+      role: 'Industrial Controls Technician',
+      company: 'Whalen Automation and Integration',
+      location: 'Greenwood, AR',
+      start: '2024',
       end: 'Present',
       summary:
-        'Endpoint and systems support across a university campus, keeping faculty, staff, and student devices running.',
+        'Engineer and maintain automation systems — PLCs, HMIs, and industrial robots — for diverse control applications.',
       highlights: [
-        'Troubleshoot Windows, macOS, iOS, and iPadOS hardware and software issues for end users.',
-        'Image, deploy, and remotely manage devices using Active Directory, MECM, Microsoft Intune, and JAMF.',
-        'Provide remote and on-site assistance across the campus fleet.',
+        'Engineer, implement, and maintain PLCs, HMIs, industrial robots, and diverse control systems.',
+        'Troubleshoot complex industrial control systems and machinery to minimize downtime.',
+        'Collaborate with engineering teams to design and integrate automation solutions.',
       ],
     },
     {
-      role: 'Electrical Technician',
-      company: 'Glatfelter',
-      start: '2021',
-      end: '2022',
+      role: 'PC Systems Analyst (Level II Technician)',
+      company: 'University of Arkansas – Fort Smith',
+      location: 'Fort Smith, AR',
+      start: '2022',
+      end: '2024',
       summary:
-        'Maintained industrial automation and electrical systems on the plant floor.',
+        'Level II desktop support across a multi-building university campus.',
       highlights: [
-        'Programmed and maintained PLCs, HMIs, and SCADA systems for production machinery.',
-        'Installed and repaired electrical wiring for machines and devices.',
+        'Provided Level II desktop support for Windows and macOS across a multi-building campus.',
+        'Deployed, imaged, and maintained computers and A/V systems for students, faculty, and staff.',
+        'Used Active Directory, MECM, and Jamf for endpoint management and software deployment.',
+        'Collaborated with IT departments to resolve escalated issues and improve support workflows.',
       ],
     },
     {
-      role: 'IT / Signal Support Specialist (25B, 25U)',
+      role: 'IT / Signal Support Specialist (MOS 25B / 25U)',
       company: 'U.S. Army',
+      location: 'Various Locations (incl. Kuwait, Iraq)',
       start: '2012',
       end: '2019',
       summary:
         'Deployed IT and signal-support specialist running networks and help-desk operations stateside and overseas.',
       highlights: [
-        'Managed an IT help desk in Kuwait and base surveillance + flight scheduling operations in Iraq.',
-        'Built and maintained network infrastructure — server stacks, cabling, and connectivity.',
-        'Performed preventive maintenance on electronic and communications equipment.',
-        'Trained at the U.S. Army Signal School (Ft. Gordon); earned CompTIA Security+. Awarded the Army Commendation Medal.',
+        'Managed and monitored network infrastructure; performed patching and preventive maintenance on electronic devices.',
+        'Constructed networking cables, configured and maintained server stacks, and monitored server health.',
+        'Supervised IT help desk operations in Kuwait in a high-tempo environment.',
+        'Managed base surveillance systems and flight scheduling operations in Iraq.',
       ],
     },
   ],
@@ -115,8 +119,23 @@ export const profile = {
   ],
 
   // --- Certifications --------------------------------------------------------
+  // (Section is hidden while this list is empty.)
   certifications: [
-    { name: 'CompTIA Security+', issuer: 'CompTIA', year: '' },
+    // { name: 'CompTIA Security+', issuer: 'CompTIA', year: '' }, // re-add if you hold an active cert
+  ],
+
+  // --- Awards & Honors -------------------------------------------------------
+  awards: [
+    'Army Commendation Medal',
+    'National Defense Service Ribbon',
+    'Army Service Ribbon',
+    'Global War on Terrorism Service Medal',
+    'GWOT Expeditionary Medal',
+    'Armed Forces Service Medal',
+    'Overseas Service Medal w/ Mobilization Device',
+    'Arkansas Service Medal',
+    'Arkansas Federal Service Medal',
+    'Operation Inherent Resolve Campaign Medal (2017)',
   ],
 
   // --- Projects --------------------------------------------------------------
