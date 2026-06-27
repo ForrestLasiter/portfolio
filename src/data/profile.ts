@@ -151,8 +151,8 @@ export const profile = {
     {
       name: 'Homelab',
       blurb:
-        'My self-hosted lab environment — the place I run, test, and document the infrastructure that backs everything else.', // TODO: tell me what you actually run and I'll expand this
-      stack: ['Proxmox', 'Docker', 'Networking'],
+        'A self-hosted lab built on Proxmox, where I run VMs and containers for whatever I’m learning or testing next. Docker hosts a rotating set of self-hosted services, and the whole thing sits behind a segmented network — VLANs, a pfSense firewall, and VPN access — so I can break things safely and treat it like real production infrastructure.',
+      stack: ['Proxmox', 'Docker', 'pfSense', 'VLANs', 'Linux'],
       link: '',
     },
   ],
