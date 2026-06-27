@@ -151,8 +151,8 @@ export const profile = {
     {
       name: 'Homelab',
       blurb:
-        'A self-hosted lab built on Proxmox, where I run VMs and containers for whatever I’m learning or testing next. Docker hosts a rotating set of self-hosted services, and the whole thing sits behind a segmented network — VLANs, a pfSense firewall, and VPN access — so I can break things safely and treat it like real production infrastructure.',
-      stack: ['Proxmox', 'Docker', 'pfSense', 'VLANs', 'Linux'],
+        'A Proxmox host running a mix of VMs and containers — an OctoPrint container driving my 3D printer, and an Ubuntu Server VM running Docker and a K3s Kubernetes cluster. I’m currently standing up a pfSense VM to firewall an isolated security lab: a Kali Linux box and a Metasploit VM for hands-on penetration-testing practice.',
+      stack: ['Proxmox', 'K3s', 'Docker', 'pfSense', 'Kali Linux', 'OctoPrint'],
       link: '',
     },
   ],
