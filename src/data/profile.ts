@@ -142,11 +142,32 @@ export const profile = {
   // Things you've built. The homelab itself is a great entry here.
   projects: [
     {
+      name: 'PC Doctor',
+      blurb:
+        'A native Windows desktop app that scans a PC for 20+ common performance and reliability problems — temp-file bloat, low disk space, DNS and network-stack issues, stuck Windows services, system-file corruption (DISM/SFC), SMART disk health, driver and RAM faults — and fixes them with one click. Keeps a local run history and handles longer repairs in the background.',
+      stack: ['Rust', 'Tauri', 'Windows'],
+      link: 'https://github.com/ForrestLasiter/pc-doctor',
+    },
+    {
+      name: 'homevpn',
+      blurb:
+        'A self-hosted WireGuard VPN hub for a Proxmox homelab: one-command container setup, per-device configs with QR codes, DuckDNS dynamic DNS, and optional Pi-hole ad-blocking with encrypted upstream DNS. Extends through a documented multi-phase roadmap to a cloud VPS exit node and a Tor/Whonix anonymity gateway.',
+      stack: ['WireGuard', 'Proxmox', 'Shell', 'Pi-hole', 'Linux'],
+      link: 'https://github.com/ForrestLasiter/homevpn',
+    },
+    {
       name: 'QuoteIT',
       blurb:
         'A job-quoting SaaS for independent IT contractors: fill in a little, it auto-populates the rest, shows a market-value band, and generates shareable, acceptable quotes.',
       stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
       link: '', // private for now
+    },
+    {
+      name: 'WellSpring OS',
+      blurb:
+        'A custom Debian-based Linux distribution built from scratch with live-build in Docker — a themed XFCE desktop (with a KDE Plasma variant), original SVG branding, a boot splash, a Calamares installer, bundled Qt6/QML apps, and a DNS-level content filter. Produces a reproducible bootable ISO on any machine.',
+      stack: ['Debian', 'live-build', 'Docker', 'XFCE', 'QML'],
+      link: '', // private
     },
     {
       name: 'Homelab',
