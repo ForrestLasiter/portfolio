@@ -163,13 +163,6 @@ export const profile = {
       link: '', // private for now
     },
     {
-      name: 'WellSpring OS',
-      blurb:
-        'A custom Debian-based Linux distribution built from scratch with live-build in Docker — a themed XFCE desktop (with a KDE Plasma variant), original SVG branding, a boot splash, a Calamares installer, bundled Qt6/QML apps, and a DNS-level content filter. Produces a reproducible bootable ISO on any machine.',
-      stack: ['Debian', 'live-build', 'Docker', 'XFCE', 'QML'],
-      link: '', // private
-    },
-    {
       name: 'Homelab',
       blurb:
         'A Proxmox host running a mix of VMs and containers — an OctoPrint container driving my 3D printer, and an Ubuntu Server VM running Docker and a K3s Kubernetes cluster. I’m currently standing up a pfSense VM to firewall an isolated security lab: a Kali Linux box and a Metasploit VM for hands-on penetration-testing practice.',
