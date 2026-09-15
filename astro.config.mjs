@@ -18,5 +18,5 @@ import { defineConfig } from 'astro/config';
 // -----------------------------------------------------------------------------
 export default defineConfig({
   site: 'https://forrestlasiter.github.io',
-  base: '/',
+  base: '/portfolio',
 });
