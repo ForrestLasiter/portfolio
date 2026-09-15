@@ -9,7 +9,7 @@
 export const profile = {
   // --- Header / hero ---------------------------------------------------------
   name: 'Forrest Lasiter',
-  title: 'IT Professional · Industrial Controls · U.S. Army Veteran',
+  title: 'IT Professional · U.S. Army Veteran',
   tagline:
     'IT professional and U.S. Army veteran with 10+ years in IT, network administration, and systems support — skilled in endpoint management, enterprise tooling, and Windows, macOS, and Linux environments.',
   location: 'Fort Smith, Arkansas',
@@ -27,7 +27,7 @@ export const profile = {
   // --- About -----------------------------------------------------------------
   about: [
     'I’m an IT professional and U.S. Army veteran with 10+ years across information technology, network administration, and systems support. I’m skilled in endpoint management and enterprise tooling — Active Directory, MECM, Microsoft 365, and Jamf — and in supporting Windows, macOS, and Linux environments.',
-    'My background runs from enterprise IT support to industrial controls and electronics: I’ve managed campus device fleets, run military help desks overseas, and now engineer PLC- and robotics-driven automation systems. I’m looking for an IT role where technical depth and a service-first mindset drive results.',
+    'I’ve managed campus device fleets, run military help desks overseas, and I keep my skills sharp in a homelab where I run virtualization, containers, and a segmented security network. I’m looking for an IT role where technical depth and a service-first mindset drive results.',
   ],
 
   // --- Skills ---------------------------------------------------------------
@@ -43,15 +43,15 @@ export const profile = {
     },
     {
       label: 'Security & Support',
-      skills: ['IT Security Fundamentals', 'Patch Management', 'Level II Helpdesk', 'Hardware/Software Troubleshooting'],
+      skills: ['IT Security Fundamentals', 'Patch Management', 'Level II Helpdesk', 'Hardware/Software Troubleshooting', 'A/V Support'],
     },
     {
-      label: 'Industrial & Electrical',
-      skills: ['PLCs', 'HMIs', 'Industrial Robotics', 'Control Systems', 'Campus A/V Systems'],
+      label: 'Homelab & Virtualization',
+      skills: ['Proxmox', 'Docker', 'K3s', 'Self-hosting'],
     },
     {
-      label: 'Homelab & Tools',
-      skills: ['Proxmox', 'Docker', 'Self-hosting', 'PowerShell'],
+      label: 'Scripting & Automation',
+      skills: ['PowerShell', 'Bash', 'Python'],
     },
   ],
 
@@ -65,11 +65,11 @@ export const profile = {
       start: '2024',
       end: 'Present',
       summary:
-        'Engineer and maintain automation systems — PLCs, HMIs, and industrial robots — for diverse control applications.',
+        'Troubleshoot and integrate complex networked systems, applying hands-on hardware, software, and networking skills to keep operations running.',
       highlights: [
-        'Engineer, implement, and maintain PLCs, HMIs, industrial robots, and diverse control systems.',
-        'Troubleshoot complex industrial control systems and machinery to minimize downtime.',
-        'Collaborate with engineering teams to design and integrate automation solutions.',
+        'Diagnose and resolve hardware, software, and network faults across integrated systems to minimize downtime.',
+        'Configure and network industrial PCs and connected devices; document and standardize system configurations.',
+        'Collaborate with engineering teams to design, implement, and support automation solutions.',
       ],
     },
     {
