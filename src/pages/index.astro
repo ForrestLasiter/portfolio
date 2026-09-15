@@ -11,7 +11,7 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
 
 <Layout>
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary">
     <div class="wrap nav__inner">
       <a class="nav__brand" href="#top">{profile.name}</a>
       <div class="nav__links">
@@ -24,7 +24,7 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
     </div>
   </nav>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <!-- HERO -->
     <header class="hero">
       <div class="wrap">
@@ -60,17 +60,17 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
     </header>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" aria-labelledby="about-label">
       <div class="wrap">
-        <div class="section-label">About</div>
+        <h2 class="section-label" id="about-label">About</h2>
         {profile.about.map((p) => <p style="color:var(--text-soft);max-width:680px;">{p}</p>)}
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" aria-labelledby="skills-label">
       <div class="wrap">
-        <div class="section-label">Skills</div>
+        <h2 class="section-label" id="skills-label">Skills</h2>
         {profile.skillGroups.map((g) => (
           <div class="skillgroup">
             <div class="skillgroup__label">{g.label}</div>
@@ -83,9 +83,9 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience">
+    <section id="experience" aria-labelledby="experience-label">
       <div class="wrap">
-        <div class="section-label">Experience</div>
+        <h2 class="section-label" id="experience-label">Experience</h2>
         {hasExperience ? (
           <div class="cards">
             {profile.experience.map((e) => (
@@ -128,9 +128,9 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
     </section>
 
     <!-- EDUCATION -->
-    <section id="education">
+    <section id="education" aria-labelledby="education-label">
       <div class="wrap">
-        <div class="section-label">Education</div>
+        <h2 class="section-label" id="education-label">Education</h2>
         <div class="cards">
           {profile.education.map((ed) => (
             <div class="card">
@@ -147,14 +147,14 @@ const hasExperience = profile.experience.some((e) => e.company !== 'Company Name
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section id="projects" aria-labelledby="projects-label">
       <div class="wrap">
-        <div class="section-label">Projects</div>
+        <h2 class="section-label" id="projects-label">Projects</h2>
         <div class="cards cols-2">
           {profile.projects.map((p) => (
             <div class="card">
               <h3>
-                {p.link ? <a href={p.link} target="_blank" rel="noopener">{p.name} ↗</a> : p.name}
+                {p.link ? <a href={p.link} target="_blank" rel="noopener">{p.name} <span aria-hidden="true">↗</span></a> : p.name}
               </h3>
               <p>{p.blurb}</p>
               {p.stack?.length > 0 && (
